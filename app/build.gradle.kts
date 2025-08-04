@@ -23,7 +23,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false // isMinifyEnabled thay cho minifyEnabled
+            isMinifyEnabled = false // isMinifyEnabled replaces minifyEnabled
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }

@@ -32,7 +32,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8" // Dùng dấu ""
+        jvmTarget = "1.8" // Use double quotes
     }
     // Thêm khối này vào để sử dụng Jetpack Compose
     buildFeatures {

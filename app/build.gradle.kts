@@ -1,4 +1,4 @@
-// Áp dụng script ngoài bằng cú pháp Kotlin
+// Apply external script using Kotlin syntax
 apply(from = "ktlint.gradle")
 
 plugins {

@@ -39,7 +39,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8" // Phiên bản phù hợp với Kotlin 1.8.20
+        kotlinCompilerExtensionVersion = "1.5.8" // Version compatible with Kotlin 1.8.20
     }
 }
 

@@ -34,7 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8" // Use double quotes
     }
-    // Thêm khối này vào để sử dụng Jetpack Compose
+    // Add this block to enable Jetpack Compose
     buildFeatures {
         compose = true
     }

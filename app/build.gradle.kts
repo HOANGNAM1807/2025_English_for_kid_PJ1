@@ -52,7 +52,7 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
-    // Thêm các thư viện Compose cần thiết cho các bước sau
+    // Add necessary Compose libraries for future steps
     val composeBom = platform("androidx.compose:compose-bom:2024.05.00")
     implementation(composeBom)
     implementation("androidx.activity:activity-compose:1.9.0")

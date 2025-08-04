@@ -9,8 +9,16 @@ jobs:
     stage: ktlint
     image: amazoncorretto:17.0.10
     cache:
+<<<<<<< HEAD
 
       - key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
+=======
+<<<<<<< HEAD
+      - key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+=======
+      - key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
+>>>>>>> c858e6c (initialize project)
+>>>>>>> 7b88df0 (initialize project)
         paths:
           - ./gradle
     before_script:
@@ -20,6 +28,7 @@ jobs:
     script:
       - ./gradlew ktlintCheck --daemon
       - status1=$?
+<<<<<<< HEAD
       - if [[ "$status1" = 0 ]] ; then
       - echo "*******************************************************"
       - echo "             Ktlint runs successfully                  " > .build_status
@@ -32,7 +41,24 @@ jobs:
       - echo "*******************************************************"
       - exit status1
       - fi
+<<<<<<< HEAD
 
+=======
+=======
+      - if [[ "$status1" = 0 ]]; then
+        echo "*******************************************************"
+        echo "             Ktlint runs successfully                  " > .build_status
+        echo "                    (handshake)                        " > .build_icon
+        echo "*******************************************************"
+        else
+        echo "*******************************************************"
+        echo "                 Ktlint failed                         "
+        echo "     Please fix the reported issues before commit.     "
+        echo "*******************************************************"
+        exit $status1
+        fi
+>>>>>>> c858e6c (initialize project)
+>>>>>>> 7b88df0 (initialize project)
     only:
       branches:
         - develop
@@ -47,6 +73,7 @@ jobs:
     script:
       - ./gradlew detekt --daemon
       - status2=$?
+<<<<<<< HEAD
       - if [[ "$status2" = 0 ]] ; then
       - echo "*******************************************************"
       - echo "             Detekt runs successfully                  " > .build_status
@@ -59,6 +86,20 @@ jobs:
       - echo "*******************************************************"
       - exit status2
       - fi
+=======
+      - if [[ "$status2" = 0 ]]; then
+        echo "*******************************************************"
+        echo "             Detekt runs successfully                  " > .build_status
+        echo "                    (handshake)                        " > .build_icon
+        echo "*******************************************************"
+        else
+        echo "*******************************************************"
+        echo "                 Detekt failed                         "
+        echo "     Please fix the reported issues before commit.     "
+        echo "*******************************************************"
+        exit $status2
+        fi
+>>>>>>> c858e6c (initialize project)
     only:
       branches:
         - develop
